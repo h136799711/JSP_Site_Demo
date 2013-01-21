@@ -1,4 +1,4 @@
-JSP_SIte_Demo
+JSP_Site_Demo
 =============
 
 实习时要求做的一个简单的新闻发布系统基于JSP
