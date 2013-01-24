@@ -27,7 +27,7 @@ create table FocusNews
    user_id               int,
    focus_title          varchar(100),
    focus_content        text,
-   focus_pubtime        date,
+   focus_pubtime        TimeStamp,
    primary key (focus_id)
 );
 
@@ -40,7 +40,7 @@ create table News
    user_id               int,
    news_title           varchar(100),
    news_content         text,
-   news_pubtime         date,
+   news_pubtime         TimeStamp,
    newstype_id          int,
    primary key (news_id)
 );
@@ -64,7 +64,7 @@ create table Notice
    user_id               int,
    no_title             varchar(100),
    no_content           text,
-   no_pubtime           date,
+   no_pubtime           TimeStamp,
    primary key (no_id)
 );
 

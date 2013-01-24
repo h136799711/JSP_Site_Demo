@@ -6,25 +6,25 @@ package com.ibm.MySqlDao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.ibm.IDao.IBaseDAO;
 
-
 /**
- * @author admin
- * ÔÚJDBCÖÐÍê³ÉÊý¾Ý²Ù×÷µÄ²½Öè
- * 1. ¶¨ÒåÁ¬½Ó
- * 2. ´´½¨Êý¾ÝµÄ´¦Àí¶ÔÏó£¨Statement½Ó¿Ú£¬PreparedStatement½Ó¿Ú£©
- * 3. »ñÈ¡´¦ÀíµÄ½á¹û(ResultSet ½Ó¿Ú)
+ * @author admin ï¿½ï¿½JDBCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ 1. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2.
+ *         ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Statementï¿½Ó¿Ú£ï¿½PreparedStatementï¿½Ó¿Ú£ï¿½ 3.
+ *         ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½(ResultSet ï¿½Ó¿ï¿½)
  */
 public class BaseDAO implements IBaseDAO {
 
 	protected Connection conn = null;
 	protected PreparedStatement pst = null;
 	protected ResultSet rs = null;
-	
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.ibm.IDao.IBaseDAO#add(java.lang.Object)
 	 */
 	public boolean add(Object entity) {
@@ -32,7 +32,9 @@ public class BaseDAO implements IBaseDAO {
 		return false;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.ibm.IDao.IBaseDAO#delete(java.lang.Object)
 	 */
 	public boolean delete(Object entity) {
@@ -40,16 +42,20 @@ public class BaseDAO implements IBaseDAO {
 		return false;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.ibm.IDao.IBaseDAO#select()
 	 */
 	@SuppressWarnings("unchecked")
 	public List select() {
 		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.ibm.IDao.IBaseDAO#update(java.lang.Object)
 	 */
 	public boolean update(Object entity) {

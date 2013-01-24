@@ -6,35 +6,38 @@ package com.ibm.IDao;
 import java.util.List;
 
 /**
- * @author admin
- * »ù´¡Dao½Ó¿Ú
+ * @author admin ï¿½ï¿½Daoï¿½Ó¿ï¿½
  */
 public interface IBaseDAO {
 	/**
-	 * Ìí¼Ó¶ÔÏó
+	 * ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½
+	 * 
 	 * @param entity
-	 * @return Boolean
+	 * @return boolean
 	 */
 	public boolean add(Object entity);
-	
+
 	/**
-	 * É¾³ý¶ÔÏó
+	 * É¾ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * 
 	 * @param entity
 	 * @return Boolean
 	 */
 	public boolean delete(Object entity);
-	
+
 	/**
-	 * ¸üÐÂÊý¾Ý¶ÔÏó
-	 * @param entity
-	 * @return Boolean
-	 */
-	public boolean update(Object entity);
-	
-	/**
-	 * ²éÑ¯Êý¾Ý
+	 * ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½
+	 * 
 	 * @return List
 	 */
 	@SuppressWarnings("unchecked")
 	public List select();
+
+	/**
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¶ï¿½ï¿½ï¿½
+	 * 
+	 * @param entity
+	 * @return boolean
+	 */
+	public boolean update(Object entity);
 }

@@ -4,7 +4,8 @@
 package com.ibm.model;
 
 /**
- * 用户信息模型类
+ * 锟矫伙拷锟斤拷息模锟斤拷锟斤拷
+ * 
  * @author admin
  * 
  */
@@ -13,48 +14,60 @@ public class UserInfo {
 	private String userName;
 	private String userAccount;
 	private String userPassword;
+
 	/**
-	 * @param userPassword the userPassword to set
+	 * @param userPassword
+	 *            the userPassword to set
 	 */
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
 	}
+
 	/**
 	 * @return the userPassword
 	 */
 	public String getUserPassword() {
 		return userPassword;
 	}
+
 	/**
-	 * @param userAccount the userAccount to set
+	 * @param userAccount
+	 *            the userAccount to set
 	 */
 	public void setUserAccount(String userAccount) {
 		this.userAccount = userAccount;
 	}
+
 	/**
 	 * @return the userAccount
 	 */
 	public String getUserAccount() {
 		return userAccount;
 	}
+
 	/**
-	 * @param userName the userName to set
+	 * @param userName
+	 *            the userName to set
 	 */
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+
 	/**
 	 * @return the userName
 	 */
 	public String getUserName() {
 		return userName;
 	}
+
 	/**
-	 * @param userId the userId to set
+	 * @param userId
+	 *            the userId to set
 	 */
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
+
 	/**
 	 * @return the userId
 	 */
@@ -62,7 +75,4 @@ public class UserInfo {
 		return userId;
 	}
 
-	
-	
-	
 }

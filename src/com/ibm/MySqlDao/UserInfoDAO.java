@@ -9,80 +9,88 @@ import java.util.List;
 
 import com.ibm.IDao.IUserInfoDAO;
 import com.ibm.model.UserInfo;
-import com.ibm.util.MySqlConnectionUtil;
-
-
+import com.ibm.util.MySqlUtil;
 
 /**
  * @author admin
  * 
  */
-public class UserInfoDAO extends BaseDAO implements IUserInfoDAO{
-	
-	private MySqlConnectionUtil util = null;
+public class UserInfoDAO extends BaseDAO implements IUserInfoDAO {
+
 	/**
-	 * ∏˘æ›ID—°‘Ò”√ªß–≈œ¢
-	 * @param id 
+	 * ÊµãËØï
+	 * 
+	 * @param args
 	 */
-	public UserInfo selectById(int id) {
-		util = new MySqlConnectionUtil();
-		
-		//ªÒ»° ˝æ›ø‚µƒ¡¨Ω”
-		conn = util.getConnection();
-		try{
-			//ªÒ»° ˝æ›ø‚µƒ‘§¥¶¿Ì∂‘œÛ£ª"?"’ºŒª∑˚
-			pst =  conn.prepareStatement("select * from Users where user_id = ? ");
-			
-			pst.setInt(1,id);
-			rs = pst.executeQuery();
-			UserInfo info = null;
-			if(rs.next()){
-				info = new UserInfo();
-				info.setUserId(rs.getInt("user_id"));
-				info.setUserName(rs.getString("user_name"));
-				info.setUserAccount(rs.getString("user_account"));	
-				info.setUserPassword(rs.getString("user_password"));				
-			}
-			return info;
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
-		
-		return null;
+	public static void main(String[] args) {
+
+		System.out.println("START");
+		UserInfo info1 = new UserInfo();
+		// UserInfo info2 = new UserInfo();
+		// UserInfo info3 = new UserInfo();
+		IUserInfoDAO dao = new UserInfoDAO();
+
+		info1.setUserId(123);
+		info1.setUserAccount("hebidu");
+		info1.setUserPassword("hebidu");
+		UserInfo info = new UserInfo();
+		System.out.println("checkBy");
+		dao.checkBy(info1.getUserAccount(), info1.getUserPassword(), info);
+		System.out
+				.println(info.getUserAccount() + " Áî®Êà∑Âêç " + info.getUserName());
+		System.out.println("END");
+
+		/*
+		 * info2.setUserId(123); info2.setUserName("hebidu2");
+		 * info2.setUserAccount("hebidu2"); info2.setUserPassword("123456");
+		 * 
+		 * 
+		 * info3.setUserName("hebidu3"); info3.setUserAccount("hebidu3");
+		 * info3.setUserPassword("123456");
+		 * 
+		 * dao.add(info1); dao.add(info2); dao.add(info3);
+		 */
+
+		// System.out.println("÷¥ÔøΩ–ΩÔøΩÔøΩ "+dao.delete(info1));
+		// System.out.println("÷¥ÔøΩ–ΩÔøΩÔøΩ "+dao.selectById(123).getUserName());
+		// System.out.println("÷¥ÔøΩ–ΩÔøΩÔøΩ "+dao.select().size());
+		// System.out.println("÷¥ÔøΩ–ΩÔøΩÔøΩ " + dao.update(info1));
 	}
 
 	/**
-	 * ÃÌº””√ªß–≈œ¢
+	 * ÔøΩÔøΩÔøΩÔøΩ√ªÔøΩÔøΩÔøΩœ¢
+	 * 
 	 * @param Object
 	 */
+	@Override
 	public boolean add(Object entity) {
-		util = new MySqlConnectionUtil();
-		conn = util.getConnection();
-		UserInfo info = (UserInfo) entity;
-		
-		try {
-			pst = conn.prepareStatement("insert into Users(user_id,user_name,user_account,user_password) values(?,?,?,?) ");
 
-			pst.setLong(1, info.getUserId());
-			pst.setString(2, info.getUserName());
-			pst.setString(3, info.getUserAccount());
-			pst.setString(4,info.getUserPassword());
-			
+		conn = MySqlUtil.getConnection();
+		UserInfo info = (UserInfo) entity;
+
+		try {
+			pst = conn
+					.prepareStatement("insert into Users(user_name,user_account,user_password) values(?,?,?) ");
+
+			// pst.setLong(1, info.getUserId());
+			pst.setString(1, info.getUserName());
+			pst.setString(2, info.getUserAccount());
+			pst.setString(3, info.getUserPassword());
+
 			return (pst.executeUpdate() != 0);
-			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 		return false;
 	}
-	
+
+	@Override
 	public boolean delete(Object entity) {
-		
-		util = new MySqlConnectionUtil();
-		conn = util.getConnection();
+
+		conn = MySqlUtil.getConnection();
 		String sql = "delete  from users where user_id = ? ";
 		UserInfo userInfo = (UserInfo) entity;
 		try {
@@ -96,18 +104,18 @@ public class UserInfoDAO extends BaseDAO implements IUserInfoDAO{
 		return false;
 	}
 
+	@Override
 	@SuppressWarnings("unchecked")
 	public List select() {
 
-		util = new MySqlConnectionUtil();
-		conn = util.getConnection();
+		conn = MySqlUtil.getConnection();
 		String sql = "select *  from users ";
 		List<UserInfo> list = new ArrayList<UserInfo>();
-		
+
 		try {
 			pst = conn.prepareStatement(sql);
 			rs = pst.executeQuery();
-			while(rs.next()){
+			while (rs.next()) {
 				UserInfo info = new UserInfo();
 				info.setUserId(rs.getInt("user_id"));
 				info.setUserName(rs.getString("user_name"));
@@ -115,19 +123,49 @@ public class UserInfoDAO extends BaseDAO implements IUserInfoDAO{
 				info.setUserPassword(rs.getString("user_password"));
 				list.add(info);
 			}
-			return list;
 		} catch (SQLException e) {
-			
+
 			e.printStackTrace();
 		}
-		
-		return null;
+
+		return list;
 	}
 
+	/**
+	 * Ê†πÊçÆIDÈÄâÊã©Áî®Êà∑‰ø°ÊÅØ
+	 * 
+	 * @param id
+	 */
+	public UserInfo selectById(int id) {
+
+		conn = MySqlUtil.getConnection();
+		UserInfo info = new UserInfo();
+		try {
+
+			pst = conn
+					.prepareStatement("select * from Users where user_id = ? ");
+
+			pst.setInt(1, id);
+			rs = pst.executeQuery();
+			if (rs.next()) {
+				info.setUserId(rs.getInt("user_id"));
+				info.setUserName(rs.getString("user_name"));
+				info.setUserAccount(rs.getString("user_account"));
+				info.setUserPassword(rs.getString("user_password"));
+			} else {
+				info.setUserId(Integer.MIN_VALUE);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return info;
+	}
+
+	@Override
 	public boolean update(Object entity) {
 
-		util = new MySqlConnectionUtil();
-		conn = util.getConnection();
+		conn = MySqlUtil.getConnection();
 		String sql = "update   users set user_name = ? ,user_account = ? , user_password = ? where user_id = ? ";
 		UserInfo userInfo = (UserInfo) entity;
 		try {
@@ -145,38 +183,34 @@ public class UserInfoDAO extends BaseDAO implements IUserInfoDAO{
 	}
 
 	/**
-	 * ∞—√˚◊÷∏ƒ≥…◊‘º∫µƒ√˚◊÷£¨÷¥––“ª¥Œ°£
-	 * 
-	 * @param args
+	 * ËøîÂõû0,Ë°®Á§∫È™åËØÅÊ≠£Á°Æ
 	 */
-	public static void main(String[] args){
-		UserInfo info1 = new UserInfo();
-	//	UserInfo info2 = new UserInfo();
-	//	UserInfo info3 = new UserInfo();
-		IUserInfoDAO dao = new UserInfoDAO();
+	public int checkBy(String username, String password, UserInfo userInfo) {
 
-		info1.setUserId(123);
-		info1.setUserName("hebidu");
-		info1.setUserAccount("hebidu");
-		info1.setUserPassword("12622");
-		
-/*		info2.setUserId(123);
-		info2.setUserName("hebidu2");
-		info2.setUserAccount("hebidu2");
-		info2.setUserPassword("123456");
-		
-		info3.setUserName("hebidu3");
-		info3.setUserAccount("hebidu3");
-		info3.setUserPassword("123456");
-		
-		dao.add(info1);
-		dao.add(info2);
-		dao.add(info3);*/
-		
-	//	System.out.println("÷¥––Ω·π˚ "+dao.delete(info1));
-	//	System.out.println("÷¥––Ω·π˚ "+dao.selectById(123).getUserName());
-	//	System.out.println("÷¥––Ω·π˚ "+dao.select().size());
-		System.out.println("÷¥––Ω·π˚ "+dao.update(info1));
+		conn = MySqlUtil.getConnection();
+		//System.out.println("get Connection");
+		String sql = "select * from Users  where user_account = ? and user_password = ? ";
+
+		try {
+			pst = conn.prepareStatement(sql);
+			pst.setString(1, username);
+			pst.setString(2, password);
+			rs = pst.executeQuery();
+			if (rs.next()) {
+				if (userInfo != null) {
+					userInfo.setUserId(rs.getInt("user_id"));
+					userInfo.setUserAccount(rs.getString("user_account"));
+					userInfo.setUserName(rs.getString("user_name"));
+					userInfo.setUserPassword(rs.getString("user_password"));
+				}
+				return 0;
+			}
+			return 1;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return -1;
 	}
-	
+
 }

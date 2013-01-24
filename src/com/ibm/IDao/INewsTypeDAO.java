@@ -1,5 +1,7 @@
 package com.ibm.IDao;
 
-public interface INewsTypeDAO extends IBaseDAO{
+import com.ibm.model.NewsType;
 
+public interface INewsTypeDAO extends IBaseDAO {
+	public NewsType selectById(int newstypeId);
 }

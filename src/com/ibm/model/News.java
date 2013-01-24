@@ -3,91 +3,110 @@
  */
 package com.ibm.model;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 /**
- * ÐÂÎÅÄ£ÐÍÀà
+ * ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½
+ * 
  * @author admin
- *
+ * 
  */
 public class News {
-	private int newsId;
-	private int userId;
-	private String newsTitle;
 	private String newsContent;
-	private Date newsPubtime;
+	private int newsId;
+	private Timestamp newsPubtime;
+	private String newsTitle;
 	private int newstypeId;
-	/**
-	 * @param newsId the newsId to set
-	 */
-	public void setNewsId(int newsId) {
-		this.newsId = newsId;
-	}
-	/**
-	 * @return the newsId
-	 */
-	public int getNewsId() {
-		return newsId;
-	}
-	/**
-	 * @param userId the userId to set
-	 */
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-	/**
-	 * @return the userId
-	 */
-	public int getUserId() {
-		return userId;
-	}
-	/**
-	 * @param newsTitle the newsTitle to set
-	 */
-	public void setNewsTitle(String newsTitle) {
-		this.newsTitle = newsTitle;
-	}
-	/**
-	 * @return the newsTitle
-	 */
-	public String getNewsTitle() {
-		return newsTitle;
-	}
-	/**
-	 * @param newsContent the newsContent to set
-	 */
-	public void setNewsContent(String newsContent) {
-		this.newsContent = newsContent;
-	}
+	private int userId;
+
 	/**
 	 * @return the newsContent
 	 */
 	public String getNewsContent() {
 		return newsContent;
 	}
+
 	/**
-	 * @param newsPubtime the newsPubtime to set
+	 * @return the newsId
 	 */
-	public void setNewsPubtime(Date newsPubtime) {
-		this.newsPubtime = newsPubtime;
+	public int getNewsId() {
+		return newsId;
 	}
+
 	/**
 	 * @return the newsPubtime
 	 */
-	public Date getNewsPubtime() {
+	public Timestamp getNewsPubtime() {
 		return newsPubtime;
 	}
+
 	/**
-	 * @param newstypeId the newstypeId to set
+	 * @return the newsTitle
 	 */
-	public void setNewstypeId(int newstypeId) {
-		this.newstypeId = newstypeId;
+	public String getNewsTitle() {
+		return newsTitle;
 	}
+
 	/**
 	 * @return the newstypeId
 	 */
 	public int getNewstypeId() {
 		return newstypeId;
 	}
-	
+
+	/**
+	 * @return the userId
+	 */
+	public int getUserId() {
+		return userId;
+	}
+
+	/**
+	 * @param newsContent
+	 *            the newsContent to set
+	 */
+	public void setNewsContent(String newsContent) {
+		this.newsContent = newsContent;
+	}
+
+	/**
+	 * @param newsId
+	 *            the newsId to set
+	 */
+	public void setNewsId(int newsId) {
+		this.newsId = newsId;
+	}
+
+	/**
+	 * @param newsPubtime
+	 *            the newsPubtime to set
+	 */
+	public void setNewsPubtime(Timestamp newsPubtime) {
+		this.newsPubtime = newsPubtime;
+	}
+
+	/**
+	 * @param newsTitle
+	 *            the newsTitle to set
+	 */
+	public void setNewsTitle(String newsTitle) {
+		this.newsTitle = newsTitle;
+	}
+
+	/**
+	 * @param newstypeId
+	 *            the newstypeId to set
+	 */
+	public void setNewstypeId(int newstypeId) {
+		this.newstypeId = newstypeId;
+	}
+
+	/**
+	 * @param userId
+	 *            the userId to set
+	 */
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
 }
