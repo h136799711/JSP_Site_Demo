@@ -1,0 +1,89 @@
+10
+
+dir
+157
+svn://10.55.5.123/NewsManager/src/com/ibm/ctrl
+svn://10.55.5.123
+
+
+
+2013-01-24T09:42:45.250000Z
+156
+hbd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2b22d529-d721-5641-9f83-1b93204cddea
+
+BaseServlet.java
+file
+
+
+
+
+
+1a60ec0d93f74a4e75362670ed27e036
+2013-01-23T10:55:44.843750Z
+137
+zdt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+opaquelocktoken:12e735ac-8599-3840-bc7c-5c6256e688e2
+hbd
+冻结
+2013-01-23T11:06:14.734375Z
+
+
+696
+
+pages
+dir
+
+bForce
+dir
+
+fNews
+dir
+
+fForce
+dir
+
+bAffiche
+dir
+
+bSort
+dir
+
+fAffiche
+dir
+
+bManager
+dir
+
+bNews
+dir
+

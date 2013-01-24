@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<filter>
+		<filter-name>CharacterEncoding</filter-name>
+		<filter-class>com.ibm.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>InsertAfficheServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bAffiche.InsertAfficheServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>select notice</display-name>
+		<servlet-name>SelectAfficheServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bAffiche.SelectAfficheServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>UpdateAfficheServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bAffiche.UpdateAfficheServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>DeleteAfficheServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bAffiche.DeleteAfficheServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>BaseManagerServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bManager.BaseManagerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>SelectManagerServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bManager.SelectManagerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>InsertManagerServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bManager.InsertManagerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>InsertSortServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bSort.InsertSortServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>UpdateSortServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bSort.UpdateSortServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>DeleteSortServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bSort.DeleteSortServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>BaseSortServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bSort.BaseSortServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>SelectSortServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bSort.SelectSortServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>SelectAfficheDetailsServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bAffiche.SelectAfficheDetailsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>QueryUserServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bManager.QueryUserServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>UpdateManagerServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bManager.UpdateManagerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>BaseForceServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bForce.BaseForceServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>BaseNewsServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bNews.BaseNewsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>SelectForceServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bForce.SelectForceServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>UpdateForceServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bForce.UpdateForceServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>DeleteForceServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bForce.DeleteForceServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>update notice</display-name>
+		<servlet-name>SelectForceDetailsServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bForce.SelectForceDetailsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>InsertForceServlet</display-name>
+		<servlet-name>InsertForceServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bForce.InsertForceServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>InsertNewsServlet</display-name>
+		<servlet-name>InsertNewsServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bNews.InsertNewsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>DeleteNewsServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bNews.DeleteNewsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SelectNewsServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bNews.SelectNewsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SelectNewsDetailsServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bNews.SelectNewsDetailsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>UpdateNewsServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bNews.UpdateNewsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SelectAllNewsServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bNews.SelectAllNewsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>DeleteManagerServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bManager.DeleteManagerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>CheckManagerServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bManager.CheckManagerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>LogoutManagerServlet</servlet-name>
+		<servlet-class>com.ibm.ctrl.bManager.LogoutManagerServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>GetNewsCountByType</servlet-name>
+		<servlet-class>com.ibm.ctrl.bNews.GetNewsCountByType</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SelectNewsType</servlet-name>
+		<servlet-class>com.ibm.ctrl.fNews.SelectNewsType</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SelectNewsContent</servlet-name>
+		<servlet-class>com.ibm.ctrl.fNews.SelectNewsContent</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SelectForce</servlet-name>
+		<servlet-class>com.ibm.ctrl.fForce.SelectForce</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SelectAffiche</servlet-name>
+		<servlet-class>com.ibm.ctrl.fAffiche.SelectAffiche</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SelectNewsTop</servlet-name>
+		<servlet-class>com.ibm.ctrl.fNews.SelectNewsTop</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SearchNews</servlet-name>
+		<servlet-class>com.ibm.ctrl.fNews.SearchNews</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>DeleteNewsServlet</display-name>
+		<servlet-name>SelectMoreForce</servlet-name>
+		<servlet-class>com.ibm.ctrl.fForce.SelectMoreForce</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>DeleteNewsServlet</display-name>
+    <servlet-name>SelectForceContent</servlet-name>
+    <servlet-class>com.ibm.ctrl.fForce.SelectForceContent</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>DeleteNewsServlet</display-name>
+    <servlet-name>SelectAfficheContent</servlet-name>
+    <servlet-class>com.ibm.ctrl.fAffiche.SelectAfficheContent</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>InsertAfficheServlet</servlet-name>
+		<url-pattern>/bAffiche/InsertAfficheServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectAfficheServlet</servlet-name>
+		<url-pattern>/bAffiche/SelectAfficheServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateAfficheServlet</servlet-name>
+		<url-pattern>/bAffiche/UpdateAfficheServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteAfficheServlet</servlet-name>
+		<url-pattern>/bAffiche/DeleteAfficheServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BaseManagerServlet</servlet-name>
+		<url-pattern>/bManager/BaseManagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectManagerServlet</servlet-name>
+		<url-pattern>/bManager/SelectManagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InsertManagerServlet</servlet-name>
+		<url-pattern>/bManager/InsertManagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>QueryUserServlet</servlet-name>
+		<url-pattern>/bManager/QueryUserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateManagerServlet</servlet-name>
+		<url-pattern>/bManager/UpdateManagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BaseSortServlet</servlet-name>
+		<url-pattern>/bSort/BaseSortServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectSortServlet</servlet-name>
+		<url-pattern>/bSort/SelectSortServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteSortServlet</servlet-name>
+		<url-pattern>/bSort/DeleteSortServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateSortServlet</servlet-name>
+		<url-pattern>/bSort/UpdateSortServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InsertSortServlet</servlet-name>
+		<url-pattern>/bSort/InsertSortServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectAfficheDetailsServlet</servlet-name>
+		<url-pattern>/bAffiche/SelectAfficheDetailsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BaseForceServlet</servlet-name>
+		<url-pattern>/bForce/BaseForceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BaseNewsServlet</servlet-name>
+		<url-pattern>/bNews/BaseNewsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectForceServlet</servlet-name>
+		<url-pattern>/bForce/SelectForceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateForceServlet</servlet-name>
+		<url-pattern>/bForce/UpdateForceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteForceServlet</servlet-name>
+		<url-pattern>/bForce/DeleteForceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectForceDetailsServlet</servlet-name>
+		<url-pattern>/bForce/SelectForceDetailsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InsertForceServlet</servlet-name>
+		<url-pattern>/bForce/InsertForceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InsertNewsServlet</servlet-name>
+		<url-pattern>/bNews/InsertNewsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteNewsServlet</servlet-name>
+		<url-pattern>/bNews/DeleteNewsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectNewsServlet</servlet-name>
+		<url-pattern>/bNews/SelectNewsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectNewsDetailsServlet</servlet-name>
+		<url-pattern>/bNews/SelectNewsDetailsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateNewsServlet</servlet-name>
+		<url-pattern>/bNews/UpdateNewsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectAllNewsServlet</servlet-name>
+		<url-pattern>/bNews/SelectAllNewsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteManagerServlet</servlet-name>
+		<url-pattern>/bManager/DeleteManagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckManagerServlet</servlet-name>
+		<url-pattern>/bManager/CheckManagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutManagerServlet</servlet-name>
+		<url-pattern>/bManager/LogoutManagerServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetNewsCountByType</servlet-name>
+		<url-pattern>/Services/GetNewsCountByType</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectNewsType</servlet-name>
+		<url-pattern>/fNews/SelectNewsType</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectNewsContent</servlet-name>
+		<url-pattern>/fNews/SelectNewsContent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectForce</servlet-name>
+		<url-pattern>/fForce/SelectForce</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectAffiche</servlet-name>
+		<url-pattern>/fAffiche/SelectAffiche</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectNewsTop</servlet-name>
+		<url-pattern>/fNews/SelectNewsTop</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchNews</servlet-name>
+		<url-pattern>/fNews/SearchNews</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectMoreForce</servlet-name>
+		<url-pattern>/fForce/SelectMoreForce</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectForceContent</servlet-name>
+    <url-pattern>/fForce/SelectForceContent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SelectAfficheContent</servlet-name>
+    <url-pattern>/fAffiche/SelectAfficheContent</url-pattern>
+  </servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+</web-app>

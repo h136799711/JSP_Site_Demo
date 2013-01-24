@@ -1,0 +1,55 @@
+10
+
+dir
+157
+svn://10.55.5.123/NewsManager/src/com/ibm
+svn://10.55.5.123
+
+
+
+2013-01-24T09:42:45.250000Z
+156
+hbd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2b22d529-d721-5641-9f83-1b93204cddea
+
+model
+dir
+
+Services
+dir
+
+ctrl
+dir
+
+filter
+dir
+
+MySqlDao
+dir
+
+ViewModel
+dir
+
+IDao
+dir
+
+IServices
+dir
+
+util
+dir
+
